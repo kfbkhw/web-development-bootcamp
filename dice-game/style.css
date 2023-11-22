@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background-color: #FFB84C;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+header.gameMessage {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-family: 'Vina Sans', sans-serif;
+  font-weight: 400;
+  font-size: 6rem;
+  color: #ffffff;
+}
+
+main {
+  margin: 20px 0;
+}
+
+button.startButton {
+  width: 320px;
+  height: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 20px;
+  background: #FFE79B;
+  color: #7149C6;
+  text-shadow: 4px 0 #D7BBF5;
+  cursor: pointer;
+}
+
+button.startButton:hover {
+  background: #40128B;
+  color: #FFE79B;
+  text-shadow: 4px 0 #A459D1;
+}
+
+.startButton h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 4.8rem;
+  letter-spacing: 3px;
+}
+
+section.gameDisplay {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.gameDisplay .display {
+  display: flex;
+  flex-direction: column;
+}
+
+.display p.player {
+  font-family: 'Titan One', sans-serif;
+  font-size: 2rem;
+  color: #F266AB;
+}
+
+.display .dice {
+  width: 240px;
+  height: 240px;
+  border: 0;
+  border-radius: 20px;
+  background: #FFFFD0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    ". . ."
+    ". dot ."
+    ". . .";
+}
+
+.dice .diceDot {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: #A555EC;
+  grid-area: dot;
+}
