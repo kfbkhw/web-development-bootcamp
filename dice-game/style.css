@@ -84,9 +84,9 @@ section.gameDisplay {
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    ". . ."
-    ". dot ."
-    ". . .";
+    "A . B"
+    "C D E"
+    "F . G";
 }
 
 .dice .diceDot {
@@ -95,5 +95,37 @@ section.gameDisplay {
   border: 0;
   border-radius: 50%;
   background: #A555EC;
-  grid-area: dot;
+}
+
+.diceDot.dotA {
+  grid-area: A;
+}
+
+.diceDot.dotB {
+  grid-area: B;
+}
+
+.diceDot.dotC {
+  grid-area: C;
+}
+
+.diceDot.dotD {
+  grid-area: D;
+}
+
+.diceDot.dotE {
+  grid-area: E;
+}
+
+.diceDot.dotF {
+  grid-area: F;
+}
+
+.diceDot.dotG {
+  grid-area: G;
+}
+
+.display.hidden,
+.diceDot.hidden {
+  display: none;
 }
