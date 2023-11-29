@@ -1,0 +1,61 @@
+body {
+  text-align: center;
+  background-color: #283149;
+}
+
+h1 {
+  font-family: "Arvo", cursive;
+  font-size: 5rem;
+  color: #DBEDF3;
+  text-shadow: 3px 0 #DA0463;
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.drum {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  outline: none;
+  border: 10px solid #404B69;
+  border-radius: 15px;
+  background-color: white;
+  font-family: 'Arvo', cursive;
+  font-weight: 900;
+  font-size: 5rem;
+  line-height: 2;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  display: inline-block;
+  text-align: center;
+}
+
+.w {}
+
+.a {}
+
+.s {}
+
+.d {}
+
+.j {}
+
+.k {}
+
+.l {}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
