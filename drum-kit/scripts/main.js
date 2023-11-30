@@ -13,12 +13,12 @@ function buttonAnimation(drumButton) {
 }
 
 // play sound on button clicks
-for (let i = 0; i < document.querySelectorAll('.drum').length; i++) {
-    document.querySelectorAll('.drum')[i].addEventListener('click', function () {
-        playSound(this);
-        buttonAnimation(this);
-    });
-}
+document.querySelector('.set').addEventListener('click', (event) => {
+    if (event.target.classList.contains('drum')) {
+        playSound(event.target);
+        buttonAnimation(event.target);
+    }
+});
 
 // play sound on keyboard presses
 document.addEventListener('keydown', function (event) {
