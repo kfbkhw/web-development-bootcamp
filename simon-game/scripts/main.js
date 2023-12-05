@@ -15,7 +15,7 @@ $(document).keypress(() => {
 function nextSequence() {
     gameStart = true;
     gameLevel += 1;
-    $('#level-title').html('Level ' + gameLevel)
+    $('#level-title').html('Level ' + gameLevel);
     const randomNumber = Math.floor(Math.random() * 4);
     const randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
@@ -29,6 +29,7 @@ $('.container').click((event) => {
         userClickedPattern.push(userChosenColor);
         playSound(userChosenColor);
         animatePress(userChosenColor);
+        checkAnswer(userClickedPattern.length - 1);
     }
 })
 
@@ -42,4 +43,17 @@ function animatePress(currentColor) {
     setTimeout(() => {
         $('#' + currentColor).removeClass('pressed');
     }, 100);
+}
+
+function checkAnswer(currentLevel) {
+    if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+        if (gamePattern.length === userClickedPattern.length) {
+            setTimeout(() => {
+                nextSequence();
+                userClickedPattern = [];
+            }, 1000);
+        }
+    } else {
+        console.log(wrong);
+    }
 }
